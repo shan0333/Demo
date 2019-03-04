@@ -1,0 +1,33 @@
+<div class="col-md-6">
+  <table class="table table-striped">
+  <thead>
+  <tr>
+    <th>IncidentID</th>
+    <th>IncidentType</th>
+    <th>Priority</th>
+    <th>ReportedDate</th>
+    <th>StoreNo</th>
+    <th>Country</th>
+    <th>WorkedBy</th>
+    <th>Occurnce</th>
+    <th>BreachedTime</th>
+    </tr>
+  </thead>
+  <tbody>
+      <tr *ngFor="let inc of incidents">
+          <td>{{inc.incidentID}}</td>
+          <td>{{inc.incidentType}}</td>
+          <td>{{inc.priority}}</td>
+          <td>{{inc.reportedDate | date}}</td>
+          <td>{{inc.storeNo}}</td>
+          <td>{{inc.country}}</td>
+          <td>{{inc.workedBy}}</td>
+          <td>{{inc.occurnce}}</td>
+          <td>{{inc.breachedTime | date}}</td>
+          <td><button class="btn btn-danger" (click)="edit(inc)"> Edit</button></td>
+          <td><button class="btn btn-danger" (click)="delete(inc)"> Delete</button></td>
+          </tr>
+  </tbody>
+    </table>
+
+  </div>

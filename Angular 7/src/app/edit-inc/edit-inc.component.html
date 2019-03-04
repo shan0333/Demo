@@ -1,0 +1,100 @@
+<div class="col-md-6">
+  <h2 class="text-center">Edit Inc</h2>
+  <form [formGroup]="editForm" (ngSubmit)="onSubmit()">
+  <div class="row">
+   <div class="col">
+       <div class="form-group">
+        <label for="incidentID">Incident ID</label>
+        <input type="incidentID" formControlName="incidentID" placeholder="Incident ID " name="incidentId" class="form-control" id="incidentId">
+      </div>
+    </div>
+
+    <div class="col">
+      <div class="form-group">
+        <label for="incidentType">Incident Type</label>
+        <select formControlName="incidentType" id="incidentType" name="type" class="form-control">
+          <option selected>Choose...</option>
+          <option valu="HIGH1">HIGH1</option>
+        </select>
+      </div>
+    </div>
+  
+  </div>
+  
+  <div class="row">
+
+    <div class="col">
+      <div class="form-group">
+        <label for="priority">Priority</label>
+         <select formControlName="priority" id="priority" name="prior" class="form-control">
+          <option selected>Choose...</option>
+          <option valu="HIGH">HIGH</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="col">
+      <div class="form-group">
+        <label for="reportedDate">Reported Date</label>
+        <input type="date" formControlName="reportedDate" placeholder="Reported Date" name="rdate" class="form-control" id="reporteddate">
+      </div>
+    </div>
+
+  </div>
+
+  <div class="row">
+
+    <div class="col">
+      <div class="form-group">
+        <label for="storeNo">Store</label>
+        <input formControlName="storeNo" placeholder="Store" name="store" class="form-control" id="store">
+      </div>
+    </div>
+  
+    <div class="col"> 
+      <div class="form-group">
+        <label for="country">Country</label>
+        <input formControlName="country" placeholder="Country" name="count" class="form-control" id="country">
+      </div>
+    </div>
+
+  </div>
+
+  <div class="row">
+    <div class="col">
+      <div class="form-group">
+        <label for="workedBy">Worked By</label>
+        <input type="workedBy" formControlName="workedBy" placeholder="Worked By" name="worked" class="form-control" id="workedby">
+      </div>
+    </div>
+  
+    <div class="col">
+      <div class="form-group">
+        <label for="breachedTime">Breached Time</label>
+        <input type="date" formControlName="breachedTime" placeholder="Breached Time" name="breached" class="form-control" id="breachedtime">
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col">
+      <div class="form-group">
+        <label for="occurnce">Occurnce</label>
+        <input formControlName="occurnce" placeholder="Occurnce" name="occur" class="form-control" id="occurnce">
+      </div>
+    </div>
+  </div>
+
+   <!-- <div class="form-group">
+      <label for="firstName">First Name:</label>
+      <input formControlName="firstName" placeholder="First Name" name="firstName" class="form-control" id="firstName">
+    </div>
+
+    <div class="form-group">
+      <label for="lastName">Last Name:</label>
+      <input formControlName="lastName" placeholder="Last name" name="lastName" class="form-control" id="lastName">
+    </div> -->
+
+    <button class="btn btn-success">Update</button>
+  </form>
+</div>
